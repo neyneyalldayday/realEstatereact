@@ -13,7 +13,7 @@ padding: 1rem 2rem:
 z-index: 100;
 position: fixed;
 width: 100%;
-
+background: green;
 `;
 
 
@@ -75,11 +75,11 @@ margin-right: 24px;
 `;
 
 
-const Navbar = () => {
+const Navbar = ({toggle}) => {
     return (       
             <Nav>
             <Logo to="/">wuk</Logo>
-            <MenuBars />
+            <MenuBars onClick={toggle} />
             <NavMenu>
                 {menuData.map ((item, index) => (
                     <NavMenuLinks to={item.link} key={index}>
@@ -92,7 +92,7 @@ const Navbar = () => {
             </NavBtn>           
             </Nav>            
      
-    )
-}
+    );
+};
 
 export default Navbar

@@ -1,12 +1,13 @@
 import React, {useState, useRef, useEffect} from 'react';
 import styled, { css } from 'styled-components/macro';
-import Button from '../components/Button';
+import { Button } from './Button';
 import { IoMdArrowRoundForward } from 'react-icons/io';
 import { IoArrowForward, IoArrowBack } from 'react-icons/io5';
 
 const HeroSection = styled.section`
 height: 100vh;
 max-height: 1100px;
+position: relative;
 overflow: hidden;
 `;
 
@@ -51,7 +52,7 @@ justify-content: center;
         0deg,
         rgba(0, 0, 0, 0.2) 0%,
         rgba(0, 0, 0, 0.2) 50%,
-        rgba(0, 0, 0, 0.2) 100%,
+        rgba(0, 0, 0, 0.2) 100%
     );
 }
 `;
@@ -64,6 +65,9 @@ left: 0;
 width: 100vw;
 height: 100vh;
 object-fit: cover;
+margin-top:60px;
+
+
 `;
 const HeroContent= styled.div`
 position: relative;
@@ -177,7 +181,7 @@ if(!Array.isArray(slides) || slides.length <= 0) {
                      <HeroContent>
                        <h1>{slide.title}</h1>
                        <p>{slide.price}</p>
-                       <Button to={slide.path} primary="true"
+                       <Button to={slide.path} primary="true" round="true"
                        css={`max-width: 160px;`}
                        >
                     {slide.label}

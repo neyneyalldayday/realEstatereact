@@ -26,3 +26,4 @@ font-size: ${({big}) => (big ? '20px' : '14px')};
 }
 
 `
+// export default Button
