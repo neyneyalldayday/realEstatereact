@@ -14,16 +14,16 @@ export const SliderData = [
         alt: 'House'
     },
     {
-        title: "shitty houses",
-        price: "20 hot dogs",
+        title: "candy houses",
+        price: "1,000,000,000 wonka bars",
         path: '/homes',
         label: 'View Home',
         image: ImageTwo,
         alt: 'House'
     },
     {
-        title: "shitty houses",
-        price: "16 Robux",
+        title: "ramen houses",
+        price: "1,000,000,000 noods",
         path: '/homes',
         label: 'View Home',
         image: ImageThree,
