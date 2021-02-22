@@ -8,6 +8,7 @@ import InfoSection from './components/InfoSection';
 import { InfoData, InfoDataTwo } from './data/infoData';
 import Listings from './components/Listings';
 import Features from './components/Features';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
     <Listings />
     <Features />
     <InfoSection {...InfoDataTwo}/>
+    <Footer />
    </>
   );
 }
