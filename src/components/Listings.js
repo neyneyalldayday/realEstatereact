@@ -81,10 +81,20 @@ const Listings = () => {
         <Section>
             <Container>
                 <Heading>
-                    <h1>View our newest Holmes</h1>
+                    <h1
+                    data-aos='fade-right'
+                    data-aos-duration='1000'
+                    data-aos-once="true"
+                    data-aos-anchor-placement='center bottom'
+                    >View our newest Holmes</h1>
                 </Heading>
                 <InfoRow>
-                    <InfoWrap>
+                    <InfoWrap
+                     data-aos='zoom-out-up'
+                     data-aos-duration='1200'
+                     data-aos-once="true"
+                     data-aos-anchor-placement='center bottom'
+                    >
                         <Image src={HomeOne} alt="home" />
                         <h2>8 bed 10 bath house in venice, 
                          california</h2>
@@ -93,7 +103,12 @@ const Listings = () => {
                              <Arrow />
                          </InfoLink>
                     </InfoWrap>
-                    <InfoWrap>
+                    <InfoWrap
+                     data-aos='zoom-out-down'
+                     data-aos-duration='1200'
+                     data-aos-once="true"
+                     data-aos-anchor-placement='center bottom'
+                    >
                         <Image src={HomeTwo} alt="home" css=
                         {`margin-top: 120px; @media screen and (max-width: 768px) {
                             margin-top: 0px;

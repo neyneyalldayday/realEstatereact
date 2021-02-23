@@ -1,9 +1,9 @@
-import React from 'react'
-import styled, {css } from 'styled-components/macro';
-import { Link } from 'react-router-dom'
-import {menuData} from '../data/MenuData'
-import {Button} from '../components/Button'
-import {FaBars} from 'react-icons/fa'
+import React, {useState, useEffect} from 'react';
+import styled, { css } from 'styled-components/macro';
+import { Link, useLocation } from 'react-router-dom';
+import {menuData} from '../data/MenuData';
+import {Button} from '../components/Button';
+import {FaBars} from 'react-icons/fa';
 
 const Nav = styled.nav`
 height: 60px;
@@ -13,7 +13,6 @@ padding: 1rem 2rem:
 z-index: 100;
 position: fixed;
 width: 100%;
-background: green;
 `;
 
 
@@ -25,11 +24,11 @@ padding: 0 1rem;
 height: 100%;
 cursor: pointer;
 text-decoration: none;
-`
+`;
 
 const Logo = styled(Link)`
 ${NavLink}
-color: #fff;
+color: pink;
 font-style: italic;
 `;
 const MenuBars = styled(FaBars)`
@@ -37,6 +36,7 @@ display: none;
 
 @media screen and (max-width: 768px) {
     display: block;
+    background-size: contain;
     height: 40px;
     width: 40px;
     cursor: pointer;
@@ -75,9 +75,43 @@ margin-right: 24px;
 `;
 
 
-const Navbar = ({toggle}) => {
+const Navbar = ({ toggle }) => {
+
+    const [navbar, setNavbar] = useState(false)
+    const location = useLocation()
+
+    const changeBackground = () => {
+        if(window.pageYOffset >= 60) {
+          setNavbar(true)  
+        } else {
+            setNavbar(false)
+        }
+    } 
+
+    useEffect(() => {
+        const watchScroll = () => {
+            window.addEventListener('scroll', changeBackground)
+        }
+
+        watchScroll()
+
+        return () => {
+           window.removeEventLinstener('scroll', changeBackground) 
+        }
+    }, []);
+
+    let style = {
+        backgroundColor: navbar || location.pathname !== "/" ? '#CD853F' : 'transparent',
+        transition: '0.4s'
+    }
+       
+ 
+
+
+
+
     return (       
-            <Nav>
+            <Nav style={style}>
             <Logo to="/">wuk</Logo>
             <MenuBars onClick={toggle} />
             <NavMenu>
