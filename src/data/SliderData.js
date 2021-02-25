@@ -10,7 +10,7 @@ import ImageEight from '../images/house-8.jpg'
 export const SliderData = [
 
     {
-        title: "shitty houses",
+        title: "modern houses",
         price: "16 toyota priuses",
         path: '/homes',
         label: 'View Home',
@@ -18,23 +18,23 @@ export const SliderData = [
         alt: 'House'
     },
     {
-        title: "candy houses",
-        price: "1,000,000,000 wonka bars",
+        title: "vintage houses",
+        price: "1,000,000,000",
         path: '/homes',
         label: 'View Home',
         image: ImageTwo,
         alt: 'House'
     },
     {
-        title: "ramen houses",
-        price: "1,000,000,000 noods",
+        title: "mid century houses",
+        price: "1,000,000,000",
         path: '/homes',
         label: 'View Home',
         image: ImageThree,
         alt: 'House'
     },
     {
-        title: "shitty houses",
+        title: "victorian houses",
         price: "40,000,000,000,000 pennies",
         path: '/homes',
         label: 'View Home',
